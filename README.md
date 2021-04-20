@@ -171,30 +171,82 @@ a)
 En este paso se puede observar que las diferencias se producen en el cierre del archivo abierto y a su vez se prescindio del malloc() para almacenar los 
 limitadores y se optó por un tipo de dato const char*.
 
+b)
+
 ![](/taller-tp0/punto5-res-valgrind.png)
+
+En este caso se puede ver que ‘Invalid File’ falla debido a que al no poder abrirse el archivo correspondiente, se retorna un -1, lo cual no coincide
+con el resultado esperado. En el caso de ‘Single Word’ se esperaba obtener un 1 cuando se obtuvo un 0.
+
+c)
+
 ![](/taller-tp0/punto5-hexdump.png)
+
+Se puede obser que el ultimo caracter ASCII en hexadecimal es 64, el cual corresponde a la letra d de la palabra **word**. Como el ultimo caracter no es un delimitante no se cuenta la palabra cuando se ejecuta el programa.
+
+d)
+
 ![](/taller-tp0/punto5-make.png)
 ![](/taller-tp0/punto5-gdb-tp.png)
 ![](/taller-tp0/punto5-gdb-info-functions.png)
 ![](/taller-tp0/punto5-gdb-wordscounter-next.png)
 ![](/taller-tp0/punto5-gdb-break.png)
 
+### info functions
+
+Se listan todas las funciones definidas.
+
+### list wordscounter_next_state
+
+Se muestra la funcion wordscounter_next_state desde que se llamo a la funcion.
+
+### list
+
+Se muestra lo que falto de la funcion wordscounter_next_state.
+
+### break 45
+
+Se pone un **breakpoint** en la linea 45.
+
+### run input_single_word.txt
+
+Se ejecuta el programa con el archivo dado como input para analizar el comportamiento en el breakpoint.
+
+### quit
+
+Se observa que el programa devuelve 0 y se sale del debbuger.
+
+Debido a que el programa no encuentra un caracter delimitador, el programa nunca se detiene en el **breakpoint** que especificamos y en consecuencia,
+devuelve 0 como la cantidad de palabras obtenidas.
+
 <h1> Paso 6 - SERCOM - Entrega exitosa: </h1>
+a)
 
 ![](/taller-tp0/punto6-diff-main.png)
 ![](/taller-tp0/punto6-diff-wordsc.png)
 ![](/taller-tp0/punto6-diff-wordsh.png)
-![](/taller-tp0/punto6-res-valgrind.png)
+
+Se observa que se cambio la definicion de ERROR de -1 a 1. Además se modifico wordscounter_next_state para que tenga en cuenta cuando se encuentra con el fin del archivo y se contabilize la palabra.
+
+b)
+
 ![](/taller-tp0/punto6-listado-res.png)
+
+c)
+
 ![](/taller-tp0/punto6-single-word.png)
 ![](/taller-tp0/punto6-single-word-textfile.png)
-![](/taller-tp0/punto6-res-valgrind1.png)
-![](/taller-tp0/punto6-res-valgrind2.png)
-![](/taller-tp0/punto6-res-valgrind3.png)
 
 <h1> Paso 7 - SERCOM - Revisión de la entrega: </h1>
 
+![](/taller-tp0/punto6-res-valgrind.png)
 
+
+a)
+
+![](/taller-tp0/punto6-res-valgrind1.png)
+![](/taller-tp0/punto6-res-valgrind2.png)
+![](/taller-tp0/punto6-res-valgrind3.png)
 
 
 
