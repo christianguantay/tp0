@@ -129,29 +129,48 @@ a)
 
 En este paso se puede ver que se definio la funcion wordscounter_destroy para que se pueda compilar el programa.
 
+A continuacion se puede observar como las pruebas de ‘TDA’, ‘C Language’ y ‘STDIN’ se ejecutan correctamente cuando no se utiliza Valgrind a diferencia de 
+‘Invalid File’, ‘Long Filename’ y ‘Single Word’. 
+
 ![](/taller-tp0/punto4-res-sin-valgrind.png)
 
+Una vez que utilizamos Valgrind para ejecutar todas las pruebas se observa que todas las pruebas fallan al ejecutarse y comparar los resultados obtenidos con los esperados.
 
 ![](/taller-tp0/punto4-res-valgrind1.png)
+
 ![](/taller-tp0/punto4-res-valgrind2.png)
 
 
 
 b)
 
-![](/taller-tp0/punto4-longname-valgrind.png)
+![](/taller-tp0/punto4-tda-valgrind.png)
+
+Para el caso de prueba ‘TDA’ se puede observar que los errores se producen por que no se cierra el archivo que se abrio dentro del programa antes de 
+finalizar y a su vez en wordprocess_count debido a que se realiza un malloc() pero luego esta memoria pedida no se libera. 
 
 c)
 
-![](/taller-tp0/punto4-tda-valgrind.png)
+![](/taller-tp0/punto4-longname-valgrind.png)
 
-d)
+Para el caso de prueba ‘Longname’ lo que ocurre es que se produce un buffer overflow en la funcion memcpy. Esto se debe a que el nombre del archivo
+de texto utilizado como entrada supera el maximo de longitud establecido.
 
-e)
+
+d) stncpy puede ayudarnos a solucionar este problema ya que se puede definir el tamaño a utilizar de acuerdo a la longitud del nombre del archivo.
+
+e) Un **segmentation fault** ocurre cuando se intenta acceder a memoria a la cual el programa no puede mientras que un **buffer overflow** ocurre cuando se supera
+el maximo donde finaliza una variable, accediendo a otra variable y modificando el valor de esa otra variable en memoria.
 
 <h1> Paso 5 - SERCOM - Código de retorno y salida estándar: </h1>
 
+a)
+
 ![](/taller-tp0/punto5-diff.png)
+
+En este paso se puede observar que las diferencias se producen en el cierre del archivo abierto y a su vez se prescindio del malloc() para almacenar los 
+limitadores y se optó por un tipo de dato const char*.
+
 ![](/taller-tp0/punto5-res-valgrind.png)
 ![](/taller-tp0/punto5-hexdump.png)
 ![](/taller-tp0/punto5-make.png)
