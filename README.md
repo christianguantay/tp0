@@ -127,6 +127,7 @@ a)
 
 ![](/taller-tp0/punto4-diff.png)
 
+En este paso se puede ver que se definio la funcion wordscounter_destroy para que se pueda compilar el programa.
 
 ![](/taller-tp0/punto4-res-sin-valgrind.png)
 
