@@ -35,6 +35,7 @@ c)![](/taller-tp0/punto1-warning.png)
 <h1> Paso 2 - SERCOM - Errores de generación 2: </h1>
 
 ![](/taller-tp0/punto2-diff-main.png)
+
 ![](/taller-tp0/punto2-diff-wordsc.png)
 ![](/taller-tp0/punto2-diff-wordsh.png)
 ![](/taller-tp0/punto2-error-gen.png)
@@ -47,7 +48,9 @@ c)![](/taller-tp0/punto1-warning.png)
 ![](/taller-tp0/punto3-error-estilo.png)
 
 <h1> Paso 4 - SERCOM - Memory Leaks y Buffer Overflows: </h1>
+
 ![](/taller-tp0/punto4-diff.png)
+
 ![](/taller-tp0/punto4-res-sin-valgrind.png)
 ![](/taller-tp0/punto4-res-valgrind2.png)
 ![](/taller-tp0/punto4-res-valgrind1.png)
@@ -55,6 +58,7 @@ c)![](/taller-tp0/punto1-warning.png)
 ![](/taller-tp0/punto4-tda-valgrind.png)
 
 <h1> Paso 5 - SERCOM - Código de retorno y salida estándar: </h1>
+
 ![](/taller-tp0/punto5-diff.png)
 ![](/taller-tp0/punto5-res-valgrind.png)
 ![](/taller-tp0/punto5-hexdump.png)
@@ -65,6 +69,7 @@ c)![](/taller-tp0/punto1-warning.png)
 ![](/taller-tp0/punto5-gdb-break.png)
 
 <h1> Paso 6 - SERCOM - Entrega exitosa: </h1>
+
 ![](/taller-tp0/punto6-diff-main.png)
 ![](/taller-tp0/punto6-diff-wordsc.png)
 ![](/taller-tp0/punto6-diff-wordsh.png)
