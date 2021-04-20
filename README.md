@@ -25,12 +25,47 @@ redirigir la entrada de un flujo mientras que con el caracter > se puede redirig
 
 <h1> Paso 1 - SERCOM - Errores de generación y normas de programación: </h1>
 
-a)![](/taller-tp0/punto1-error-estilo.png)
+a)
+![](/taller-tp0/punto1-error-estilo.png)
 
-b)![](/taller-tp0/punto1-error-gen.png)
+Analizando los problemas de estilo podemos ver que:
 
-c)![](/taller-tp0/punto1-warning.png)
+## paso1_wordscounter.c
 
+En la linea 27 se observa que falta un espacio entre el while y el parentesis.
+
+En la linea 41 no coinciden los espacios dentro de los argumentos del if() (deberian haber 0 espacios).
+
+En la linea 47 el else deberia aparecer en la misma linea donde se cierra la llave } del if anterior.
+
+En la linea 48 falta un espacio entre el if() y el parentesis que contiene los argumentos.
+
+En la linea 53 hay un espacio entre la instruccion y el punto y coma ;.
+
+## main.c
+
+En la linea 12 es mejor usar sprintf que strcpy
+
+En la linea 15 el else deberia aparecer en la misma linea donde se cierra la llave } del if anterior.
+
+## paso1_wordscounter.h
+
+La linea 5 deberia tener menos de 80 caracteres de largo.
+
+b)
+![](/taller-tp0/punto1-error-gen.png)
+
+En la linea 22 de main.c se declara un tipo de dato desconocido words_counter_t
+
+En las lineas 23, 24, 25 y 27 de main.c se hace una declaracion implicita de funciones que no se definieron antes debido a que no se incluyo el .h
+
+Todos estos errores reportados se tratan de errores del compilador.
+
+c)
+
+![](/taller-tp0/punto1-warning.png)
+
+El sistema reporta un error ya que no se pudo compilar el programa.
 <h1> Paso 2 - SERCOM - Errores de generación 2: </h1>
 
 ![](/taller-tp0/punto2-diff-main.png)
