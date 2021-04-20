@@ -20,6 +20,6 @@ La suma de estos datos por separado nos da 5 bytes pero el **sizeof()** del **st
 que realiza la arquitectura de nuestro programa con el tipo de dato **char** debido a la presencia del dato **int**.
 
 e)
-!(/taller-tp0/punto1-error-gen.png)
+![](/taller-tp0/punto1-error-gen.png)
 
 
