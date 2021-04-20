@@ -77,29 +77,76 @@ a)
 ![](/taller-tp0/punto2-diff-wordsc.png)
 ![](/taller-tp0/punto2-diff-wordsh.png)
 
+En el archivo paso2_main.c se puede observar que se incluyo el header paso2_wordscounter.h y se reemplazo strcpy por memcpy. Ademas de esto
+se corrigio el error de estilo respecto a los brackets } en el else.
+
+En el archivo paso2_wordscounter.c se puede observar que se incluyo el header de paso2_wordscounter.h y se corrigieron los errores de estilo referentes
+a los brackets } y a los espacios dentro de los, while, if y else detallados en el paso 1.
+
+En el archivo paso2_wordscounter.h se cambio el comentario sobre para que se utiliza wordscounter_t.
+
+
 b)
 
 ![](/taller-tp0/punto2-error-estilo.png)
+
+Se puede observar que con las correcciones anteriores no se presentan errores de estilo.
+
 
 c)
 
 ![](/taller-tp0/punto2-error-gen.png)
 
+En las lineas 7 y 20 de paso2_wordscounter.h no se reconoce el tipo de dato size_t debido a que no se incluyo el header stdio.h.
+
+En la linea 25 de paso2_wordscounter.h tampoco se reconoce el tipo de dato FILE debido a que no se incluyo el header stdio.h.
+
+En la linea 17 de paso2_wordscounter.c hay un conflico en la declaracion de wordscounter_get_words debido a que no se reconoce el tipo de dato size_t.
+
+En la linea 30 de paso2_wordscounter.c no se reconoce la funcion malloc() debido que a no se incluyo el header stdlib.h
+
+Estos errores se tratan de errores del compilador.
+
 <h1> Paso 3 - SERCOM - Errores de generación 3: </h1>
 
+a)
+
 ![](/taller-tp0/punto3-diff.png)
+
+En este paso se puede ver que se agregaron las librerias faltantes stdlib.h, string.h y stdio.h para que funcione el programa.
+
+b)
+
 ![](/taller-tp0/punto3-error-gen.png)
-![](/taller-tp0/punto3-error-estilo.png)
+
+En este paso el error se debe a que hay una referencia no definida a wordscounter_destroy realizada en el momente de linkear el programa.
 
 <h1> Paso 4 - SERCOM - Memory Leaks y Buffer Overflows: </h1>
 
+a)
+
 ![](/taller-tp0/punto4-diff.png)
 
+
 ![](/taller-tp0/punto4-res-sin-valgrind.png)
-![](/taller-tp0/punto4-res-valgrind2.png)
+
+
 ![](/taller-tp0/punto4-res-valgrind1.png)
+![](/taller-tp0/punto4-res-valgrind2.png)
+
+
+
+b)
+
 ![](/taller-tp0/punto4-longname-valgrind.png)
+
+c)
+
 ![](/taller-tp0/punto4-tda-valgrind.png)
+
+d)
+
+e)
 
 <h1> Paso 5 - SERCOM - Código de retorno y salida estándar: </h1>
 
