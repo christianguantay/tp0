@@ -238,11 +238,11 @@ c)
 ![](/taller-tp0/punto6-single-word-textfile.png)
 
 <h1> Paso 7 - SERCOM - Revisión de la entrega: </h1>
+a)
 
 ![](/taller-tp0/punto6-res-valgrind.png)
 
-
-a)
+b)
 
 ![](/taller-tp0/punto6-res-valgrind1.png)
 ![](/taller-tp0/punto6-res-valgrind2.png)
