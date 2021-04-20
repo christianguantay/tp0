@@ -27,7 +27,6 @@ redirigir la entrada de un flujo mientras que con el caracter > se puede redirig
 
 a)![](/taller-tp0/punto1-error-estilo.png)
 
-
 b)![](/taller-tp0/punto1-error-gen.png)
 
 c)![](/taller-tp0/punto1-warning.png)
