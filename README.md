@@ -66,14 +66,19 @@ c)
 ![](/taller-tp0/punto1-warning.png)
 
 El sistema reporta un error ya que no se pudo compilar el programa.
+
 <h1> Paso 2 - SERCOM - Errores de generación 2: </h1>
 
+a)
 ![](/taller-tp0/punto2-diff-main.png)
-
 ![](/taller-tp0/punto2-diff-wordsc.png)
 ![](/taller-tp0/punto2-diff-wordsh.png)
-![](/taller-tp0/punto2-error-gen.png)
+
+b)
 ![](/taller-tp0/punto2-error-estilo.png)
+
+c)
+![](/taller-tp0/punto2-error-gen.png)
 
 <h1> Paso 3 - SERCOM - Errores de generación 3: </h1>
 
