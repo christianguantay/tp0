@@ -26,6 +26,7 @@ redirigir la entrada de un flujo mientras que con el caracter > se puede redirig
 <h1> Paso 1 - SERCOM - Errores de generación y normas de programación: </h1>
 
 a)
+
 ![](/taller-tp0/punto1-error-estilo.png)
 
 Analizando los problemas de estilo podemos ver que:
@@ -53,6 +54,7 @@ En la linea 15 el else deberia aparecer en la misma linea donde se cierra la lla
 La linea 5 deberia tener menos de 80 caracteres de largo.
 
 b)
+
 ![](/taller-tp0/punto1-error-gen.png)
 
 En la linea 22 de main.c se declara un tipo de dato desconocido words_counter_t
@@ -70,14 +72,17 @@ El sistema reporta un error ya que no se pudo compilar el programa.
 <h1> Paso 2 - SERCOM - Errores de generación 2: </h1>
 
 a)
+
 ![](/taller-tp0/punto2-diff-main.png)
 ![](/taller-tp0/punto2-diff-wordsc.png)
 ![](/taller-tp0/punto2-diff-wordsh.png)
 
 b)
+
 ![](/taller-tp0/punto2-error-estilo.png)
 
 c)
+
 ![](/taller-tp0/punto2-error-gen.png)
 
 <h1> Paso 3 - SERCOM - Errores de generación 3: </h1>
