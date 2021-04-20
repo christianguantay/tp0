@@ -1,6 +1,6 @@
 # Nombre: Christian Guantay
 # Padron: 98538
-# Repositorio de Github: 
+# Repositorio de Github: https://github.com/christianguantay/tp0
 
 <h1> Paso 0 - Entorno de trabajo: </h1>
 
