@@ -15,9 +15,13 @@ que la segunda chequea fugas de memoria.
 
 c) **sizeof()** es un operador del lenguaje C que representa el tamaño en bytes de un tipo de dato. Si tenemos un tipo de dato **char**, de acuerdo a la arquitectura utilizada por la computadora donde se ejecuto el presente trabajo practico, el valor de salida sera de 1 byte. Para el tipo de dato **int** sera de 4 bytes.
 
+Siempre aclarar que depende de la arquitectura y del compilador.
+
 d) No es siempre el caso. Supongamos que tengo un **struct** compuesto por los tipos de dato que analizamos anteriormente, un **char** y un  **int**. 
 La suma de estos datos por separado nos da 5 bytes pero el **sizeof()** del **struct** propuesto resultara de 8 bytes. Esto se debe al padeo o **padding**
 que realiza la arquitectura de nuestro programa con el tipo de dato **char** debido a la presencia del dato **int**.
+
+Probá que pasa con un short en vez de un int
 
 e) STDIN, STDOUT y STDERR son flujos predefinidos utilizados para la entrada, salida y el flujo de errores de un programa. Se puede utilizar el caracter < para 
 redirigir la entrada de un flujo mientras que con el caracter > se puede redirigir la salida de un flujo. El caracter | sirve para poner juntos 2 flujos utilizando la salida de uno como la entrada de otro.
@@ -45,7 +49,7 @@ En la linea 53 hay un espacio entre la instruccion y el punto y coma ;.
 
 ## main.c
 
-En la linea 12 es mejor usar sprintf que strcpy
+En la linea 12 es mejor usar sprintf que strcpy  <- Por qué?
 
 En la linea 15 el else deberia aparecer en la misma linea donde se cierra la llave } del if anterior.
 
@@ -68,6 +72,8 @@ c)
 ![](/taller-tp0/punto1-warning.png)
 
 El sistema reporta un error ya que no se pudo compilar el programa.
+
+Algunos de los errores son originalmente warnings, que se trataron como errores de compilación por el uso del flag -Werror. Son los que empiezan con -W...
 
 <h1> Paso 2 - SERCOM - Errores de generación 2: </h1>
 
@@ -105,7 +111,9 @@ En la linea 17 de paso2_wordscounter.c hay un conflico en la declaracion de word
 
 En la linea 30 de paso2_wordscounter.c no se reconoce la funcion malloc() debido que a no se incluyo el header stdlib.h
 
-Estos errores se tratan de errores del compilador.
+También hay un error que dice que se va a usar la declaración built-in de malloc(), que retorna int en vez de void*
+
+Estos errores se tratan de errores del compilador.  <- De nuevo, esto es cierto a medias. Son originalmente warnings, que fueron tratados como errores por -Werror
 
 <h1> Paso 3 - SERCOM - Errores de generación 3: </h1>
 
@@ -119,7 +127,7 @@ b)
 
 ![](/taller-tp0/punto3-error-gen.png)
 
-En este paso el error se debe a que hay una referencia no definida a wordscounter_destroy realizada en el momente de linkear el programa.
+En este paso el error se debe a que hay una referencia no definida a wordscounter_destroy realizada en el momento de linkear el programa.
 
 <h1> Paso 4 - SERCOM - Memory Leaks y Buffer Overflows: </h1>
 
@@ -127,9 +135,9 @@ a)
 
 ![](/taller-tp0/punto4-diff.png)
 
-En este paso se puede ver que se definio la funcion wordscounter_destroy para que se pueda compilar el programa.
+En este paso se puede ver que se definió la funcion wordscounter_destroy para que se pueda compilar el programa.
 
-A continuacion se puede observar como las pruebas de ‘TDA’, ‘C Language’ y ‘STDIN’ se ejecutan correctamente cuando no se utiliza Valgrind a diferencia de 
+A continuación se puede observar como las pruebas de ‘TDA’, ‘C Language’ y ‘STDIN’ se ejecutan correctamente cuando no se utiliza Valgrind a diferencia de 
 ‘Invalid File’, ‘Long Filename’ y ‘Single Word’. 
 
 ![](/taller-tp0/punto4-res-sin-valgrind.png)
@@ -159,7 +167,7 @@ de texto utilizado como entrada supera el maximo de longitud establecido.
 
 d) stncpy puede ayudarnos a solucionar este problema ya que se puede definir el tamaño a utilizar de acuerdo a la longitud del nombre del archivo.
 
-e) Un **segmentation fault** ocurre cuando se intenta acceder a memoria a la cual el programa no puede mientras que un **buffer overflow** ocurre cuando se supera
+e) Un **segmentation fault** ocurre cuando se intenta acceder a memoria a la cual el proceso no tiene permiso mientras que un **buffer overflow** ocurre cuando se supera
 el maximo donde finaliza una variable, accediendo a otra variable y modificando el valor de esa otra variable en memoria.
 
 <h1> Paso 5 - SERCOM - Código de retorno y salida estándar: </h1>
@@ -226,7 +234,7 @@ a)
 ![](/taller-tp0/punto6-diff-wordsc.png)
 ![](/taller-tp0/punto6-diff-wordsh.png)
 
-Se observa que se cambio la definicion de ERROR de -1 a 1. Además se modifico wordscounter_next_state para que tenga en cuenta cuando se encuentra con el fin del archivo y se contabilize la palabra.
+Se observa que se cambio la definicion de ERROR de -1 a 1. Además se modifico wordscounter_next_state para que tenga en cuenta cuando se encuentra con el fin del archivo y se contabilice la palabra.
 
 b)
 
